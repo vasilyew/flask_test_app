@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/static/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script type="text/javascript" src="/static/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-4 text-center">
+                    <h1>Sign in to system</h1>
+                    <div class="mb-3">
+                        <input id="login" class="form-control" type="text" placeholder="Login" />
+                    </div>
+                    <div class="mb-3">
+                        <input id="password" class="form-control" type="password" placeholder="Password" />
+                    </div>
+                    <div class="mb-3 ">
+                        <input id="submit" class="form-control btn btn-success" type="submit" value="Sign in" />
+                    </div>
+                    <div id="login-error-message" class="mb-3 text-danger" style="display: none;">
+                        Incorrect login or password
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/static/login.js"></script>
+    </body>
+</html>

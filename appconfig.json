@@ -1,0 +1,6 @@
+{
+    "dbConnection": "postgresql+psycopg2://test-app:test@localhost/test-db",
+    "debug": true,
+    "suPassword": "Qwerty123",
+    "sessionLifetime": 120
+}
