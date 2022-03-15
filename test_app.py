@@ -1,3 +1,4 @@
+import asyncio
 from crypt import methods
 from http.client import responses
 from flask import Flask, render_template, request, json
@@ -11,6 +12,8 @@ from providers import permissions_provider
 import request_schemas
 from request_validation_decorator import validation_body
 import responses
+import gateway
+
 
 app = Flask(__name__)
 
@@ -98,6 +101,17 @@ def delete_user(user_id):
     response = app.response_class(
         status=204,
     )
+    return response
+
+
+@app.route('/users-async')
+async def get_users_async():
+    data = await gateway.get_users_data()
+    response = app.response_class(
+            response= json.dumps(data),
+            status=200,
+            mimetype='application/json'
+        )
     return response
 
 
